@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_200">#522258</color>
+    <color name="red_500">#8C3061</color>
+    <color name="red_700">#C63C51</color>
+    <color name="yellow_200">#FFBF00</color>
+    <color name="yellow_700">#FF9A00</color>
+    <color name="black">#363434</color>
+    <color name="white">#EFECEC</color>
+
+    
+    
+    <color name="Black">#363434</color>
+    <color name = "Gray">#5C5757</color>
+    <color name="Teal">#62929A</color>
+    <color name="Winter">#EFECEC</color>
+</resources>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activity.FormularioPersonagem">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/card_imagemPersonagem_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:srcCompat="@drawable/default_imagem" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:baselineAligned="false"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Informações Básicas"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/card_nomePersonagem_Formulario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:hint="Nome do personagem"
+                        android:textSize="14sp"
+                        app:boxStrokeWidth="0dp" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/card_RacaPersonagem_Formulario"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:hint="Raça do personagem"
+                        android:textSize="14sp"
+                        app:boxStrokeWidth="0dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/card_classePersonagem_Formulario"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:hint="Classe do personagem"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:textSize="14sp"
+                        app:boxStrokeWidth="0dp" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Habilidades"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <!-- Força -->
+                        <TextView
+                            android:id="@+id/text_forca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Força (STR)"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_forca"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:inputType="none"
+                            android:text="0"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@id/btn_increment_forca"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btn_increment_forca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toStartOf="@id/btn_decrement_forca"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_increment_button" />
+
+                        <ImageButton
+                            android:id="@+id/btn_decrement_forca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_decrement_button" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <!-- Destreza -->
+                        <TextView
+                            android:id="@+id/text_destreza"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Destreza (DEX)"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_destreza"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            android:gravity="center"
+                            android:inputType="none"
+                            android:text="0"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@id/btn_increment_destreza"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btn_increment_destreza"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toStartOf="@id/btn_decrement_destreza"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_increment_button" />
+
+                        <ImageButton
+                            android:id="@+id/btn_decrement_destreza"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_decrement_button" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+                        <!-- Constituição -->
+                        <TextView
+                            android:id="@+id/text_constituicao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Constituição (CON)"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_constituicao"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            android:gravity="center"
+                            android:inputType="none"
+                            android:text="0"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@id/btn_increment_constituicao"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btn_increment_constituicao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toStartOf="@id/btn_decrement_constituicao"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_increment_button" />
+
+                        <ImageButton
+                            android:id="@+id/btn_decrement_constituicao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_decrement_button" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+                        <!-- Inteligência -->
+                        <TextView
+                            android:id="@+id/text_inteligencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Inteligência (INT)"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_inteligencia"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            android:gravity="center"
+                            android:inputType="none"
+                            android:text="0"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@id/btn_increment_inteligencia"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btn_increment_inteligencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toStartOf="@id/btn_decrement_inteligencia"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_increment_button" />
+
+                        <ImageButton
+                            android:id="@+id/btn_decrement_inteligencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_decrement_button" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+                        <!-- ISabedoria  -->
+                        <TextView
+                            android:id="@+id/text_sabedoria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Sabedoria (WIS)"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_sabedoria"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            android:gravity="center"
+                            android:inputType="none"
+                            android:text="0"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@id/btn_increment_sabedoria"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btn_increment_sabedoria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@id/btn_decrement_sabedoria"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_increment_button" />
+
+                        <ImageButton
+                            android:id="@+id/btn_decrement_sabedoria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_decrement_button" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+                        <!-- Carisma  -->
+                        <TextView
+                            android:id="@+id/text_carisma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/red_500"
+                            android:text="Carisma (CHA)"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_carisma"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            android:gravity="center"
+                            android:inputType="none"
+                            android:text="0"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@id/btn_increment_carisma"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btn_increment_carisma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toStartOf="@id/btn_decrement_carisma"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_increment_button" />
+
+                        <ImageButton
+                            android:id="@+id/btn_decrement_carisma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red_500"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ac_decrement_button" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/formulario_botaoSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Salvar"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+

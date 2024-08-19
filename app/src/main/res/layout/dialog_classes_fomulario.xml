@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:padding="10dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroupClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/radio_button_1">
+
+            <RadioButton
+                android:id="@+id/radio_button_guerreiro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Guerreiro"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_mago"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Mago"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_bardo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bardo"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_bruxo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bruxo"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_clerigo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Clerigo"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_ladino"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Ladino"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_monge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Monge"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_paladino"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Paladino"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_cacador"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Caçador"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
